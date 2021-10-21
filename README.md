@@ -23,7 +23,7 @@ The following **extensions** are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://giphy.com/gifs/niJNZtSsy01aY8SPW8' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/niJNZtSsy01aY8SPW8/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [Apowersoft](https://www.apowersoft.tw/free-online-screen-recorder).
 
