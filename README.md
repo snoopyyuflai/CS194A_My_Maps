@@ -21,8 +21,8 @@ The following **extensions** are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
-part 1
+Here's a walkthrough of implemented user stories:<br />
+part 1<br />
 <img src='https://media.giphy.com/media/niJNZtSsy01aY8SPW8/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
