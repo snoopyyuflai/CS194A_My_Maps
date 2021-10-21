@@ -67,8 +67,8 @@ class CreateMapActivity : AppCompatActivity(), OnMapReadyCallback {
                 return true
             }
             val places = markers.map { marker -> Place(marker.title, marker.snippet, marker.position.latitude, marker.position.longitude) }
-//            val userMap = intent.getStringExtra(EXTRA_MAP_TITLE)?.let { UserMap(it, places) }
-            val userMap = UserMap(intent.getStringExtra(EXTRA_MAP_TITLE), places)
+            val userMap = intent.getStringExtra(EXTRA_MAP_TITLE)?.let { UserMap(it, places) }
+//            val userMap = UserMap(intent.getStringExtra(EXTRA_MAP_TITLE), places)
             val data = Intent()
             data.putExtra(EXTRA_MAP_TITLE, userMap)
             setResult(Activity.RESULT_OK, data)
@@ -80,12 +80,6 @@ class CreateMapActivity : AppCompatActivity(), OnMapReadyCallback {
 
     /**
      * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
@@ -101,9 +95,8 @@ class CreateMapActivity : AppCompatActivity(), OnMapReadyCallback {
 
         }
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val siliconValley = LatLng(37.4, -122.1)
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(siliconValley, 10f))
 
 
     }
@@ -121,12 +114,12 @@ class CreateMapActivity : AppCompatActivity(), OnMapReadyCallback {
 
         dialog.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener{
             val title = placeFormView.findViewById<EditText>(R.id.etTitle).text.toString()
-            val descripton = placeFormView.findViewById<EditText>(R.id.etDescription).text.toString()
-            if(title.trim().isEmpty() || descripton.trim().isEmpty()){
+            val description = placeFormView.findViewById<EditText>(R.id.etDescription).text.toString()
+            if(title.trim().isEmpty() || description.trim().isEmpty()){
                 Toast.makeText(this,"Place must have non-empty title and description", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
-            val marker = mMap.addMarker(MarkerOptions().position(latLng).title(title).snippet(descripton))
+            val marker = mMap.addMarker(MarkerOptions().position(latLng).title(title).snippet(description))
             markers.add(marker)
             dialog.dismiss()
         }
