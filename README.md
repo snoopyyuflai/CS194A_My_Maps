@@ -35,8 +35,8 @@ part 5<br />
 part 6<br />
 <img src='https://media.giphy.com/media/nd10Vej6emue9dFfSv/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br />
 
-Full GIF
-[Imgur](https://i.imgur.com/IatgpoF.gifv)
+Full GIF<br />
+[Full GIF](https://i.imgur.com/IatgpoF.gifv)
 GIF created with [Apowersoft](https://www.apowersoft.tw/free-online-screen-recorder).
 
 ## Notes
