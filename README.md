@@ -22,8 +22,11 @@ The following **extensions** are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+part 1
+<img src='https://media.giphy.com/media/niJNZtSsy01aY8SPW8/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<img src='https://i.imgur.com/IatgpoF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+Full GIF
 [Imgur](https://i.imgur.com/IatgpoF.gifv)
 GIF created with [Apowersoft](https://www.apowersoft.tw/free-online-screen-recorder).
 
