@@ -49,6 +49,14 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             }
+        }, object:MapsAdapter.OnLongClickListener {
+            override fun onItemLongCLick(position: Int) {
+                Log.i(TAG, "onItemLongClick $position")
+                // When user long taps on view in RV, delete that map
+//                userMaps.removeAt(position)
+//                rvMaps.adapter = mapAdapter
+                showDeleteDialog(position)
+            }
         })
         rvMaps.adapter = mapAdapter
 
@@ -57,6 +65,27 @@ class MainActivity : AppCompatActivity() {
             showAlertDialog()
 //            getResult.launch(intent)
         }
+    }
+
+    private fun showDeleteDialog(position: Int) {
+        val mapFormView = LayoutInflater.from(this).inflate(R.layout.dialog_delete_map, null)
+        val dialog =
+            AlertDialog.Builder(this)
+                .setTitle("Deleting Maps")
+                .setView(mapFormView)
+                .setMessage("Are you sure want to delete this map?")
+                .setNegativeButton("No", null)
+                .setPositiveButton("Yes", null)
+                .show()
+
+        dialog.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener{
+            // Delete the map
+            userMaps.removeAt(position)
+            rvMaps.adapter = mapAdapter
+            serializeUserMaps(this, userMaps)
+            dialog.dismiss()
+        }
+
     }
 
     private fun showAlertDialog() {

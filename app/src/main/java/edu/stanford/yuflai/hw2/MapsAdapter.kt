@@ -10,10 +10,13 @@ import androidx.recyclerview.widget.RecyclerView
 import edu.stanford.yuflai.hw2.models.UserMap
 
 private const val TAG = "MapsAdapter"
-class MapsAdapter(val context: Context, val userMaps: List<UserMap>, val onClickListener: OnClickListener) : RecyclerView.Adapter<MapsAdapter.ViewHolder>() {
+class MapsAdapter(val context: Context, val userMaps: List<UserMap>, val onClickListener: OnClickListener, val onLongClickListener: OnLongClickListener) : RecyclerView.Adapter<MapsAdapter.ViewHolder>() {
 
     interface OnClickListener{
         fun onItemCLick(position: Int)
+    }
+    interface OnLongClickListener{
+        fun onItemLongCLick(position: Int)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,6 +31,12 @@ class MapsAdapter(val context: Context, val userMaps: List<UserMap>, val onClick
             Log.i(TAG, "Taped on position $position")
             onClickListener.onItemCLick(position)
         }
+        holder.itemView.setOnLongClickListener{
+            Log.i(TAG, "Long Tap on position $position")
+            onLongClickListener.onItemLongCLick(position)
+            true
+        }
+
         val textViewTitle = holder.itemView.findViewById<TextView>(R.id.tvMapTitle)
         textViewTitle.text = userMap.title
 
@@ -38,3 +47,4 @@ class MapsAdapter(val context: Context, val userMaps: List<UserMap>, val onClick
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }
+
