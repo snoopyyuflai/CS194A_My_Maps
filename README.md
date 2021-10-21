@@ -23,8 +23,17 @@ The following **extensions** are implemented:
 
 Here's a walkthrough of implemented user stories:<br />
 part 1<br />
-<img src='https://media.giphy.com/media/niJNZtSsy01aY8SPW8/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
+<img src='https://media.giphy.com/media/niJNZtSsy01aY8SPW8/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br />
+part 2<br />
+<img src='https://media.giphy.com/media/TFRCFPTflluac7g25Y/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br />
+part 3<br />
+<img src='https://media.giphy.com/media/itfdseXOK4BddHcOCh/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br />
+part 4<br />
+<img src='https://media.giphy.com/media/IWFBGXoLI7hLbjXgiA/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br />
+part 5<br />
+<img src='https://media.giphy.com/media/Jagd55uDbkU2V0EQjc/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br />
+part 6<br />
+<img src='https://media.giphy.com/media/nd10Vej6emue9dFfSv/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br />
 
 Full GIF
 [Imgur](https://i.imgur.com/IatgpoF.gifv)
